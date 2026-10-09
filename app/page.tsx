@@ -1,5 +1,5 @@
 "use client";
-
+import Link from "next/link";
 import { useMemo, useState } from "react";
 import {
   ArrowDownRight,
@@ -86,10 +86,13 @@ export default function Home() {
 
   return (
     <main className="relative min-h-screen overflow-hidden">
-      <div aria-hidden="true" className="page-glow pointer-events-none absolute inset-x-0 top-0 -z-10 h-[440px]" />
+      <div
+        aria-hidden="true"
+        className="page-glow pointer-events-none absolute inset-x-0 top-0 -z-10 h-[440px]"
+      />
       <div className="mx-auto w-full max-w-6xl px-4 pb-12 pt-5 sm:px-6 sm:pt-8 lg:px-8">
         <header className="flex items-center justify-between">
-          <a
+          <Link
             aria-label="Gann Levels home"
             className="flex items-center gap-3"
             href="/"
@@ -100,7 +103,7 @@ export default function Home() {
             <span className="font-display text-[17px] font-semibold tracking-tight">
               Gann<span className="text-primary">Levels</span>
             </span>
-          </a>
+          </Link>
           <div className="flex items-center gap-2">
             <span className="hidden text-xs font-medium text-muted-foreground sm:inline">
               Theme
@@ -111,8 +114,8 @@ export default function Home() {
 
         <section className="mx-auto mt-12 max-w-3xl text-center sm:mt-16">
           <div className="mb-5 inline-flex items-center gap-2 rounded-full border bg-card/80 px-3 py-1.5 text-xs font-medium text-muted-foreground shadow-sm">
-            <Sparkles aria-hidden="true" className="size-3.5 text-primary" />
-            A clear view of your key price levels
+            <Sparkles aria-hidden="true" className="size-3.5 text-primary" />A
+            clear view of your key price levels
           </div>
           <h1 className="font-display text-3xl font-semibold tracking-tight sm:text-4xl lg:text-[42px]">
             Gann Square of 9
@@ -326,8 +329,8 @@ export default function Home() {
                     Support = (√price − degree ÷ 180)<sup>2</sup>
                   </>
                 )}
-                . Levels are mathematical reference points, not a prediction
-                or investment advice.
+                . Levels are mathematical reference points, not a prediction or
+                investment advice.
               </p>
             </div>
           </CardContent>
