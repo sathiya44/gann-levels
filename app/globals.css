@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 210 30% 98%;
+  --foreground: 222 35% 12%;
+  --card: 0 0% 100%;
+  --card-foreground: 222 35% 12%;
+  --primary: 221 83% 53%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 214 32% 94%;
+  --secondary-foreground: 222 35% 16%;
+  --muted: 214 30% 95%;
+  --muted-foreground: 215 16% 45%;
+  --accent: 214 32% 94%;
+  --accent-foreground: 222 35% 16%;
+  --destructive: 0 72% 51%;
+  --positive: 152 60% 34%;
+  --negative: 0 72% 51%;
+  --border: 216 24% 88%;
+  --input: 216 24% 86%;
+  --ring: 221 83% 53%;
+  --radius: 0.75rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --background: 222 30% 8%;
+    --foreground: 210 25% 94%;
+    --card: 222 27% 11%;
+    --card-foreground: 210 25% 94%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 222 40% 10%;
+    --secondary: 217 22% 18%;
+    --secondary-foreground: 210 25% 94%;
+    --muted: 217 22% 16%;
+    --muted-foreground: 215 17% 65%;
+    --accent: 217 22% 18%;
+    --accent-foreground: 210 25% 94%;
+    --destructive: 0 63% 40%;
+    --positive: 145 63% 48%;
+    --negative: 0 86% 70%;
+    --border: 217 20% 22%;
+    --input: 217 20% 25%;
+    --ring: 217 91% 60%;
+  }
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --background: 222 30% 8%;
+  --foreground: 210 25% 94%;
+  --card: 222 27% 11%;
+  --card-foreground: 210 25% 94%;
+  --primary: 217 91% 60%;
+  --primary-foreground: 222 40% 10%;
+  --secondary: 217 22% 18%;
+  --secondary-foreground: 210 25% 94%;
+  --muted: 217 22% 16%;
+  --muted-foreground: 215 17% 65%;
+  --accent: 217 22% 18%;
+  --accent-foreground: 210 25% 94%;
+  --destructive: 0 63% 40%;
+  --positive: 145 63% 48%;
+  --negative: 0 86% 70%;
+  --border: 217 20% 22%;
+  --input: 217 20% 25%;
+  --ring: 217 91% 60%;
+  color-scheme: dark;
+}
+
+:root,
+:root[data-theme="light"] {
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+  }
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+body {
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+}
+
+.font-display {
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+}
+
+.page-glow {
+  background:
+    radial-gradient(ellipse at 50% 0%, hsl(var(--primary) / 0.09), transparent 58%),
+    linear-gradient(to bottom, hsl(var(--background)), transparent);
+}
